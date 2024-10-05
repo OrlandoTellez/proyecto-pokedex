@@ -36,5 +36,9 @@
         btnPokedex.Size = originalSize
     End Sub
 
+    Private Sub btnCrearPersonaje_Click(sender As Object, e As EventArgs) Handles btnCrearPersonaje.Click
+        Dim formgenero As FormGenero = New FormGenero()
+        formgenero.ShowDialog()
 
+    End Sub
 End Class
