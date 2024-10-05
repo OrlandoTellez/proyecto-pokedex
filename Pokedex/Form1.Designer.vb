@@ -22,10 +22,77 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnCrearPersonaje = New System.Windows.Forms.Button()
+        Me.btnCerrar = New System.Windows.Forms.Button()
+        Me.btnPokedex = New System.Windows.Forms.Button()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(-303, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(842, 537)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'btnCrearPersonaje
+        '
+        Me.btnCrearPersonaje.Font = New System.Drawing.Font("Impact", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCrearPersonaje.Location = New System.Drawing.Point(393, 168)
+        Me.btnCrearPersonaje.Name = "btnCrearPersonaje"
+        Me.btnCrearPersonaje.Size = New System.Drawing.Size(395, 54)
+        Me.btnCrearPersonaje.TabIndex = 1
+        Me.btnCrearPersonaje.Text = "Crear Personaje"
+        Me.btnCrearPersonaje.UseVisualStyleBackColor = True
+        '
+        'btnCerrar
+        '
+        Me.btnCerrar.BackColor = System.Drawing.Color.Red
+        Me.btnCerrar.Font = New System.Drawing.Font("Impact", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCerrar.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnCerrar.Location = New System.Drawing.Point(713, 398)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(75, 40)
+        Me.btnCerrar.TabIndex = 2
+        Me.btnCerrar.Text = "Cerrar"
+        Me.btnCerrar.UseVisualStyleBackColor = False
+        '
+        'btnPokedex
+        '
+        Me.btnPokedex.Font = New System.Drawing.Font("Impact", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPokedex.Location = New System.Drawing.Point(393, 246)
+        Me.btnPokedex.Name = "btnPokedex"
+        Me.btnPokedex.Size = New System.Drawing.Size(395, 54)
+        Me.btnPokedex.TabIndex = 3
+        Me.btnPokedex.Text = "Pokedex"
+        Me.btnPokedex.UseVisualStyleBackColor = True
+        '
+        'Form1
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnPokedex)
+        Me.Controls.Add(Me.btnCerrar)
+        Me.Controls.Add(Me.btnCrearPersonaje)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+
     End Sub
 
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnCrearPersonaje As Button
+    Friend WithEvents btnCerrar As Button
+    Friend WithEvents btnPokedex As Button
 End Class
