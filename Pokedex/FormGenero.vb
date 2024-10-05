@@ -12,6 +12,7 @@ Public Class FormGenero
 
     Dim dialogos As List(Of String) = New List(Of String) From {
         "Hola, un gusto, gracias por acompañarme a esta aventura...",
+        "soy el profesor",
         "para empezar necesito que me brindes algunos datos sobre ti..."
     }
 
