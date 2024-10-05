@@ -287,6 +287,8 @@ Partial Public Class BaseDeDatos
         
         Private columnnombre As Global.System.Data.DataColumn
         
+        Private columnsexo As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub New()
@@ -339,6 +341,14 @@ Partial Public Class BaseDeDatos
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property sexoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnsexo
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -375,9 +385,9 @@ Partial Public Class BaseDeDatos
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AddpersonajeRow(ByVal id As String, ByVal nombre As String) As personajeRow
+        Public Overloads Function AddpersonajeRow(ByVal id As String, ByVal nombre As String, ByVal sexo As String) As personajeRow
             Dim rowpersonajeRow As personajeRow = CType(Me.NewRow,personajeRow)
-            Dim columnValuesArray() As Object = New Object() {id, nombre}
+            Dim columnValuesArray() As Object = New Object() {id, nombre, sexo}
             rowpersonajeRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowpersonajeRow)
             Return rowpersonajeRow
@@ -402,6 +412,7 @@ Partial Public Class BaseDeDatos
         Friend Sub InitVars()
             Me.columnid = MyBase.Columns("id")
             Me.columnnombre = MyBase.Columns("nombre")
+            Me.columnsexo = MyBase.Columns("sexo")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -411,6 +422,8 @@ Partial Public Class BaseDeDatos
             MyBase.Columns.Add(Me.columnid)
             Me.columnnombre = New Global.System.Data.DataColumn("nombre", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnnombre)
+            Me.columnsexo = New Global.System.Data.DataColumn("sexo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnsexo)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -587,6 +600,21 @@ Partial Public Class BaseDeDatos
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property sexo() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablepersonaje.sexoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'sexo' de la tabla 'personaje' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablepersonaje.sexoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsidNull() As Boolean
             Return Me.IsNull(Me.tablepersonaje.idColumn)
         End Function
@@ -607,6 +635,18 @@ Partial Public Class BaseDeDatos
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetnombreNull()
             Me(Me.tablepersonaje.nombreColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IssexoNull() As Boolean
+            Return Me.IsNull(Me.tablepersonaje.sexoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetsexoNull()
+            Me(Me.tablepersonaje.sexoColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
