@@ -35,7 +35,7 @@ Public Class FormGenero
             imgChico.Visible = True
             lblChico.Visible = True
             lblChica.Visible = True
-            lblDialogo.Text = "Que eres?....."
+            lblDialogo.Text = "Que eres?..........."
         End If
     End Sub
 
