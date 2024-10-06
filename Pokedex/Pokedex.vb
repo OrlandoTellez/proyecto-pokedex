@@ -1,5 +1,4 @@
 ﻿Public Class Pokedex
-
     Private mouseloc As Point
     Private idPokemon As Integer = 1
 
