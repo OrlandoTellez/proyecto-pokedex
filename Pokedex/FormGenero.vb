@@ -13,7 +13,7 @@ Public Class FormGenero
 
     Dim dialogos As List(Of String) = New List(Of String) From {
         "Hola, un gusto, gracias por acompañarme a esta aventura...",
-        "soy el profesor",
+        "soy el profesor Samuel Oak",
         "para empezar necesito que me brindes algunos datos sobre ti..."
     }
 
@@ -35,7 +35,7 @@ Public Class FormGenero
             imgChico.Visible = True
             lblChico.Visible = True
             lblChica.Visible = True
-            lblDialogo.Text = "Que eres?..........."
+            lblDialogo.Text = "Eres un Chico o una Chica?..."
         End If
     End Sub
 
