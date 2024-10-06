@@ -75,5 +75,7 @@ Public Class FormGenero
 
     Private Sub imgChica_MouseClick(sender As Object, e As MouseEventArgs) Handles imgChica.MouseClick
         VariablesGlobales.sexo = "Chica"
+        Dim formnombre As FormNombre = New FormNombre()
+        formnombre.ShowDialog()
     End Sub
 End Class

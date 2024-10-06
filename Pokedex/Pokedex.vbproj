@@ -73,7 +73,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb" />
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
@@ -88,6 +90,12 @@
       <DependentUpon>FormNombre.vb</DependentUpon>
     </Compile>
     <Compile Include="FormNombre.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPc.Designer.vb">
+      <DependentUpon>FormPc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormPc.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -105,12 +113,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Pokedex.Designer.vb">
-      <DependentUpon>Pokedex.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Pokedex.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -127,9 +129,6 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pokedex.resx">
-      <DependentUpon>Pokedex.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
