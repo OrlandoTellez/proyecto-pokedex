@@ -27,12 +27,12 @@
         btnCrearPersonaje.Size = originalSize
     End Sub
 
-    Private Sub btnPokedex_MouseEnter(sender As Object, e As EventArgs) Handles btnPokedex.MouseEnter
+    Private Sub btnPokedex_MouseEnter(sender As Object, e As EventArgs)
         originalSize = btnPokedex.Size
         btnPokedex.Size = New Size(btnPokedex.Width + 10, btnPokedex.Height + 10)
     End Sub
 
-    Private Sub btnPokedex_MouseLeave(sender As Object, e As EventArgs) Handles btnPokedex.MouseLeave
+    Private Sub btnPokedex_MouseLeave(sender As Object, e As EventArgs)
         btnPokedex.Size = originalSize
     End Sub
 
