@@ -32,4 +32,13 @@
         formgenero.ShowDialog()
 
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Pokedex.Click
+        Dim pokedex As New Pokedex()
+
+        pokedex.Show()
+
+        Me.Hide()
+
+    End Sub
 End Class

@@ -26,6 +26,7 @@ Partial Class Form1
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnCrearPersonaje = New System.Windows.Forms.Button()
         Me.btnCerrar = New System.Windows.Forms.Button()
+        Me.Pokedex = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -61,12 +62,23 @@ Partial Class Form1
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = False
         '
+        'Pokedex
+        '
+        Me.Pokedex.Font = New System.Drawing.Font("Impact", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Pokedex.Location = New System.Drawing.Point(393, 264)
+        Me.Pokedex.Name = "Pokedex"
+        Me.Pokedex.Size = New System.Drawing.Size(395, 94)
+        Me.Pokedex.TabIndex = 3
+        Me.Pokedex.Text = "Pokedex prueba no me borres orlando algp"
+        Me.Pokedex.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Pokedex)
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.btnCrearPersonaje)
         Me.Controls.Add(Me.PictureBox1)
@@ -82,4 +94,5 @@ Partial Class Form1
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnCrearPersonaje As Button
     Friend WithEvents btnCerrar As Button
+    Friend WithEvents Pokedex As Button
 End Class
