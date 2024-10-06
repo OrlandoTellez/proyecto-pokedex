@@ -1,4 +1,5 @@
 ﻿Imports System.Reflection.Emit
+Imports Dominio
 
 Public Class FormGenero
     Private Sub FormGenero_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -34,7 +35,7 @@ Public Class FormGenero
             imgChico.Visible = True
             lblChico.Visible = True
             lblChica.Visible = True
-            lblDialogo.Text = "Que eres?..."
+            lblDialogo.Text = "Que eres?....."
         End If
     End Sub
 
@@ -60,5 +61,19 @@ Public Class FormGenero
 
     Private Sub imgChica_MouseLeave(sender As Object, e As EventArgs) Handles imgChica.MouseLeave
         imgChica.Size = originalSize
+    End Sub
+
+    Private Sub imgChico_Click(sender As Object, e As EventArgs) Handles imgChico.Click
+
+    End Sub
+
+    Private Sub imgChico_MouseClick(sender As Object, e As MouseEventArgs) Handles imgChico.MouseClick
+        VariablesGlobales.sexo = "Chico"
+        Dim formnombre As FormNombre = New FormNombre()
+        formnombre.ShowDialog()
+    End Sub
+
+    Private Sub imgChica_MouseClick(sender As Object, e As MouseEventArgs) Handles imgChica.MouseClick
+        VariablesGlobales.sexo = "Chica"
     End Sub
 End Class
