@@ -65,7 +65,7 @@ Partial Class Form1
         'Pokedex
         '
         Me.Pokedex.Font = New System.Drawing.Font("Impact", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Pokedex.Location = New System.Drawing.Point(393, 264)
+        Me.Pokedex.Location = New System.Drawing.Point(393, 281)
         Me.Pokedex.Name = "Pokedex"
         Me.Pokedex.Size = New System.Drawing.Size(395, 94)
         Me.Pokedex.TabIndex = 3
