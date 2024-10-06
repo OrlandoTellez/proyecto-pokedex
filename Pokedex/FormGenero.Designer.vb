@@ -49,9 +49,9 @@ Partial Class FormGenero
         'imgChico
         '
         Me.imgChico.Image = CType(resources.GetObject("imgChico.Image"), System.Drawing.Image)
-        Me.imgChico.Location = New System.Drawing.Point(88, -2)
+        Me.imgChico.Location = New System.Drawing.Point(50, -2)
         Me.imgChico.Name = "imgChico"
-        Me.imgChico.Size = New System.Drawing.Size(260, 401)
+        Me.imgChico.Size = New System.Drawing.Size(298, 440)
         Me.imgChico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.imgChico.TabIndex = 3
         Me.imgChico.TabStop = False
